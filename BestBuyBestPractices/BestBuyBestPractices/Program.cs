@@ -32,3 +32,11 @@ foreach(var item in prodList)
     Console.WriteLine($"{item.ProductID} - {item.Name}");
 }
 
+Console.WriteLine("What is the Product ID you want to update?");
+var prodID = int.Parse(Console.ReadLine());
+
+Console.WriteLine("What is the new product name?");
+var newName = Console.ReadLine();
+
+repo.UpdateProduct(prodID, newName);
+
